@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/top_layout_DA"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:gravity="start"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/settings_btn_DA"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/settings"
+                    android:src="@drawable/ic_settings"
+                    android:background="@android:color/transparent"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo"
+                    android:padding="15dp"
+                    android:contentDescription="@string/logo" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_DA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/black"
+                    android:src="@drawable/ic_person"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_name_DA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_layout_DA"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:text="@string/welcome"
+                android:textColor="@color/black"
+                android:gravity="center|start" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/balance_card_DA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="15dp"
+                android:layout_below="@id/user_name_DA"
+                android:elevation="15dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/balance_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_balance"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/balance_DA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_12345_99"
+                        android:textColor="@color/white"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/button_layout_DA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginHorizontal="60dp"
+                android:elevation="15dp"
+                android:background="@drawable/button_background_03"
+                android:layout_below="@id/balance_card_DA">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deposit_btn_AD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/deposit"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/send_btn_DA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/withdraw_btn_DA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/withdraw"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_FG_DA"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@+id/bottom_btn_layout_DA"
+                android:layout_below="@id/button_layout_DA"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="0dp" />
+
+            <LinearLayout
+                android:id="@+id/bottom_btn_layout_DA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:weightSum="3"
+                android:background="@color/white"
+                android:elevation="15dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_BL_DA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/home"
+                    android:drawableTop="@drawable/ic_home"
+                    android:drawableTint="@color/black"
+                    android:background="@android:color/transparent"
+                    android:paddingVertical="10dp"
+                    android:textAllCaps="false" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/new_note_BL_DA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/add_new_note"
+                    android:drawableTop="@drawable/ic_post_add"
+                    android:drawableTint="@color/black"
+                    android:background="@android:color/transparent"
+                    android:paddingVertical="10dp"
+                    android:textAllCaps="false" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/transactions_BL_DA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/transactions"
+                    android:drawableTop="@drawable/ic_transactions"
+                    android:drawableTint="@color/black"
+                    android:background="@android:color/transparent"
+                    android:paddingVertical="10dp"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nave_header"
+        app:menu="@menu/nav_menu"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

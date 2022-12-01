@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_NM"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/add_new_contact_NM"
+        android:title="@string/add_new_contact"
+        android:icon="@drawable/ic_person_add"/>
+
+    <item
+        android:id="@+id/my_contacts_NM"
+        android:title="@string/view_my_contacts"
+        android:icon="@drawable/ic_person"/>
+
+    <item
+        android:id="@+id/sign_out_NM"
+        android:title="@string/signout"
+        android:icon="@drawable/ic_sign_out"/>
+
+    <item
+        android:id="@+id/settings_NM"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"/>
+
+    <item
+        android:id="@+id/about_NM"
+        android:title="@string/about"
+        android:icon="@drawable/ic_about"/>
+
+    <item
+        android:id="@+id/exit_NM"
+        android:title="@string/exit"
+        android:icon="@drawable/ic_exit"/>
+
+</menu>

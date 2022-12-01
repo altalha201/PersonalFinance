@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_01">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="style_02">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="style_03">
+        <item name="cornerSize">35%</item>
+    </style>
+
+    <style name="animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+</resources>

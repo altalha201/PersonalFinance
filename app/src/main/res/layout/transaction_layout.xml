@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_transaction"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_background_01"
+    android:layout_marginBottom="10dp"
+    android:elevation="15dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/image_TL"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_in_coming"
+        android:padding="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:id="@+id/title_TL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/image_TL"
+        android:layout_marginStart="20dp"
+        android:text="@string/title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center|start"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/date_TL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/image_TL"
+        android:layout_below="@id/title_TL"
+        android:layout_marginStart="20dp"
+        android:text="@string/date"
+        android:textSize="16sp"
+        android:gravity="center|start"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/amount_TL"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:text="@string/_12345_99"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewNoteFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/add_note_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:id="@+id/title_ANN"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_box"
+            android:hint="@string/title"
+            android:padding="15dp"
+            android:inputType="text"
+            android:gravity="center|start"
+            android:textSize="16sp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/description_ANN"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_box"
+            android:hint="@string/description"
+            android:padding="15dp"
+            android:inputType="text"
+            android:gravity="center|start"
+            android:textSize="16sp"
+            android:importantForAutofill="no" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_btn_ANN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_note"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:paddingHorizontal="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:background="@drawable/button_background_03"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
